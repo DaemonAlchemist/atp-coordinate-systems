@@ -15,18 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="src\spherical.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
+    <ClInclude Include="src\spherical-vector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\conversion.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="src\spherical-vector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="atp-coordinate-systems.cpp">
+    <ClCompile Include="src\conversion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
