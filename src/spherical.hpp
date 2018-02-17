@@ -1,6 +1,10 @@
 #ifndef ATP_SHERICAL_SYSTEM
 #define ATP_SHERICAL_SYSTEM
 
+#ifndef ATP_LIB
+#pragma comment(lib, "atp-coordinate-systems.lib")
+#endif
+
 #include "vendor\daemonalchemist\atp-vector\src\vector.hpp"
 
 namespace ATP
@@ -15,10 +19,10 @@ namespace ATP
 				public:
 					System(Vector origin, Vector xAxis, Vector yAxis);
 
-					Vector origin();
-					Vector xAxis();
-					Vector yAxis();
-					Vector zAxis();
+					Math::Vector origin();
+					Math::Vector xAxis();
+					Math::Vector yAxis();
+					Math::Vector zAxis();
 
 				private:
 					Vector _origin, _xAxis, _yAxis, _zAxis;

@@ -1,6 +1,10 @@
 #ifndef ATP_SPHERICAL_VECTOR
 #define ATP_SPHERICAL_VECTOR
 
+#ifndef ATP_LIB
+#pragma comment(lib, "atp-coordinate-systems.lib")
+#endif
+
 #include "vendor\daemonalchemist\atp-vector\src\vector.hpp"
 
 namespace ATP

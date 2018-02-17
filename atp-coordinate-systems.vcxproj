@@ -19,13 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\cartesian.hpp" />
     <ClInclude Include="src\conversion.hpp" />
     <ClInclude Include="src\spherical-vector.hpp" />
     <ClInclude Include="src\spherical.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\cartesian.cpp" />
     <ClCompile Include="src\conversion.cpp" />
     <ClCompile Include="src\spherical-vector.cpp" />
+    <ClCompile Include="src\spherical.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

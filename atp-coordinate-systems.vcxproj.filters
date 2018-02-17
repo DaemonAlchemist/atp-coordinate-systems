@@ -24,12 +24,21 @@
     <ClInclude Include="src\conversion.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\cartesian.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\spherical-vector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\conversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\spherical.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cartesian.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

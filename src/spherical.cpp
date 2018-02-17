@@ -16,10 +16,10 @@ namespace ATP
 					_yAxis = (_zAxis ^ _xAxis).normalize();
 				}
 
-				Vector System::origin() { return _origin; }
-				Vector System::xAxis() { return _xAxis; }
-				Vector System::yAxis() { return _yAxis; }
-				Vector System::zAxis() { return _zAxis; }
+				Math::Vector System::origin() { return _origin; }
+				Math::Vector System::xAxis() { return _xAxis; }
+				Math::Vector System::yAxis() { return _yAxis; }
+				Math::Vector System::zAxis() { return _zAxis; }
 			}
 		}
 	}
