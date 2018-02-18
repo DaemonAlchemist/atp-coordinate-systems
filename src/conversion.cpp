@@ -45,11 +45,6 @@ namespace ATP
 				return absoluteToCartesian(sphericalToCartesian(s, sys1), sys2);
 			}
 
-			Vector sphericalToCartesian(Spherical::Vector s, Spherical::System sys) {
-				Vector c = sphericalToCartesian(s);
-				return c.x * sys.xAxis() + c.y * sys.yAxis() + c.z * sys.zAxis() + sys.origin();
-			}
-
 			Spherical::Vector cartesianToSpherical(Vector v) {
 				return Spherical::Vector(
 					v.length(),
