@@ -34,6 +34,18 @@ namespace ATP
 			}
 
 			Vector sphericalToCartesian(Spherical::Vector s, Spherical::System sys) {
+				return cartesianToAbsolute(sphericalToCartesian(s), Cartesian::System(sys.origin(), sys.xAxis(), sys.yAxis(), sys.zAxis()));
+			}
+
+			Vector sphericalToCartesian(Spherical::Vector s, Cartesian::System sys) {
+				return absoluteToCartesian(sphericalToCartesian(s), sys);
+			}
+
+			Vector sphericalToCartesian(Spherical::Vector s, Spherical::System sys1, Cartesian::System sys2) {
+				return absoluteToCartesian(sphericalToCartesian(s, sys1), sys2);
+			}
+
+			Vector sphericalToCartesian(Spherical::Vector s, Spherical::System sys) {
 				Vector c = sphericalToCartesian(s);
 				return c.x * sys.xAxis() + c.y * sys.yAxis() + c.z * sys.zAxis() + sys.origin();
 			}
@@ -47,8 +59,15 @@ namespace ATP
 			}
 
 			Spherical::Vector cartesianToSpherical(Vector v, Spherical::System sys) {
-				Cartesian::System c(sys.origin(), sys.xAxis(), sys.yAxis(), sys.zAxis());
-				return cartesianToSpherical(absoluteToCartesian(v, c));
+				return cartesianToSpherical(absoluteToCartesian(v, Cartesian::System (sys.origin(), sys.xAxis(), sys.yAxis(), sys.zAxis())));
+			}
+
+			Spherical::Vector cartesianToSpherical(Vector v, Cartesian::System sys) {
+				return cartesianToSpherical(cartesianToAbsolute(v, sys));
+			}
+
+			Spherical::Vector cartesianToSpherical(Vector v, Cartesian::System sys1, Spherical::System sys2) {
+				return cartesianToSpherical(cartesianToAbsolute(v, sys1), sys2);
 			}
 
 			Spherical::Vector sphericalToSpherical(Spherical::Vector s, Spherical::System sys1, Spherical::System sys2) {

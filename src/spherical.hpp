@@ -17,7 +17,7 @@ namespace ATP
 			{
 				class System {
 				public:
-					System(Vector origin, Vector xAxis, Vector yAxis);
+					System(Math::Vector origin, Math::Vector xAxis, Math::Vector yAxis);
 
 					Math::Vector origin();
 					Math::Vector xAxis();
@@ -25,7 +25,7 @@ namespace ATP
 					Math::Vector zAxis();
 
 				private:
-					Vector _origin, _xAxis, _yAxis, _zAxis;
+					Math::Vector _origin, _xAxis, _yAxis, _zAxis;
 				};
 			}
 		}

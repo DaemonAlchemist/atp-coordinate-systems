@@ -22,9 +22,13 @@ namespace ATP
 
 			Vector sphericalToCartesian(Spherical::Vector s);
 			Vector sphericalToCartesian(Spherical::Vector s, Spherical::System sys);
+			Vector sphericalToCartesian(Spherical::Vector s, Cartesian::System sys);
+			Vector sphericalToCartesian(Spherical::Vector s, Spherical::System sys1, Cartesian::System sys2);
 
 			Spherical::Vector cartesianToSpherical(Vector v);
 			Spherical::Vector cartesianToSpherical(Vector v, Spherical::System sys);
+			Spherical::Vector cartesianToSpherical(Vector v, Cartesian::System sys);
+			Spherical::Vector cartesianToSpherical(Vector v, Cartesian::System sys1, Spherical::System sys2);
 
 			Spherical::Vector sphericalToSpherical(Spherical::Vector s, Spherical::System sys1, Spherical::System sys2);
 		}

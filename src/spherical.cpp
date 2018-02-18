@@ -9,7 +9,7 @@ namespace ATP
 		{
 			namespace Spherical
 			{
-				System::System(Vector origin, Vector xAxis, Vector yAxis) {
+				System::System(Math::Vector origin, Math::Vector xAxis, Math::Vector yAxis) {
 					_origin = origin;
 					_xAxis = xAxis.normalize();
 					_zAxis = (xAxis ^ yAxis).normalize();
