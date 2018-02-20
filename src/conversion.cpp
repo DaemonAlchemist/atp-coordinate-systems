@@ -48,8 +48,8 @@ namespace ATP
 			Spherical::Vector cartesianToSpherical(Vector v) {
 				return Spherical::Vector(
 					v.length(),
-					acos(v.x / v.length()),
-					atan2(v.y, v.z)
+					acos(v.z / v.length()),
+					atan2(v.y, v.x)
 				);
 			}
 
