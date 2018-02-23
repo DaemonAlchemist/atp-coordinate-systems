@@ -1,6 +1,7 @@
 
 #include <math.h>
 #include "conversion.hpp"
+#include "vendor/daemonalchemist/atp-matrix/src/matrix.hpp"
 
 namespace ATP
 {
@@ -17,12 +18,19 @@ namespace ATP
 			}
 
 			Vector absoluteToCartesian(Vector v, Cartesian::System sys) {
-				v -= sys.origin();
-				return Vector(
-					v.projectionOnto(sys.xAxis()).length(),
-					v.projectionOnto(sys.yAxis()).length(),
-					v.projectionOnto(sys.zAxis()).length()
-				);
+				Matrix m(3, 3);
+				m(0, 0) = sys.xAxis().x; m(0, 1) = sys.yAxis().x; m(0, 2) = sys.zAxis().x;
+				m(1, 0) = sys.xAxis().y; m(1, 1) = sys.yAxis().y; m(1, 2) = sys.zAxis().y;
+				m(2, 0) = sys.xAxis().z; m(2, 1) = sys.yAxis().z; m(2, 2) = sys.zAxis().z;
+
+				Matrix vFinal(3, 1);
+				vFinal(0, 0) = v.x - sys.origin().x;
+				vFinal(1, 0) = v.y - sys.origin().y;
+				vFinal(2, 0) = v.z - sys.origin().z;
+
+				Matrix mRelative = m.inverse() * vFinal;
+
+				return Vector(mRelative(0, 0), mRelative(1, 0), mRelative(2, 0));
 			}
 
 			Vector sphericalToCartesian(Spherical::Vector s) {

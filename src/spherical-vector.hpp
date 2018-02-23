@@ -1,7 +1,7 @@
 #ifndef ATP_SPHERICAL_VECTOR
 #define ATP_SPHERICAL_VECTOR
 
-#ifndef ATP_LIB
+#ifndef ATP_COORDINATE_SYSTEMLIB
 #pragma comment(lib, "atp-coordinate-systems.lib")
 #endif
 

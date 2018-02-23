@@ -1,7 +1,7 @@
 #ifndef ATP_COORDINATE_CONVERSION
 #define ATP_COORDINATE_CONVERSION
 
-#ifndef ATP_LIB
+#ifndef ATP_COORDINATE_SYSTEMLIB
 #pragma comment(lib, "atp-coordinate-systems.lib")
 #endif
 

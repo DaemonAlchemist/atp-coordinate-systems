@@ -1,7 +1,7 @@
 #ifndef ATP_CARTESIAN_SYSTEM
 #define ATP_CARTESIAN_SYSTEM
 
-#ifndef ATP_LIB
+#ifndef ATP_COORDINATE_SYSTEMLIB
 #pragma comment(lib, "atp-coordinate-systems.lib")
 #endif
 

@@ -1,7 +1,7 @@
 #ifndef ATP_SHERICAL_SYSTEM
 #define ATP_SHERICAL_SYSTEM
 
-#ifndef ATP_LIB
+#ifndef ATP_COORDINATE_SYSTEMLIB
 #pragma comment(lib, "atp-coordinate-systems.lib")
 #endif
 
